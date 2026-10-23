@@ -1,0 +1,39 @@
+{
+  "source": {
+    "revision": "3bee4f2fcb1c5ead4eb317b30c3ed2fccf38d6b1",
+    "dirty": false
+  },
+  "openaxis": {
+    "package": "OpenAxis",
+    "version": "1.0.0-rc.1"
+  },
+  "build_platform": "Windows",
+  "target": "netstandard2.1/AnyCPU; Unity Editor Windows, macOS, Linux",
+  "files": {
+    "Editor/BouncyCastle.Cryptography.dll": "c26320939255a03e67d30ecb06e4894f9ba3c5fd10b339b5b71520f276f07bac",
+    "Editor/BouncyCastle.Cryptography.dll.meta": "d488f67e7a01f8004baa8dd9c7c15d93cc01fc753a039f5df8e9682a93dac811",
+    "Editor/MessagePack.Annotations.dll": "bd364b1513c9df5d4063b6ee3602a5bf951507484f46a2366a6f2a9aeb1c4cf2",
+    "Editor/MessagePack.Annotations.dll.meta": "5174d6b14cac480183f016e2133392f88e38d65110e7be60ff57146925064aee",
+    "Editor/MessagePack.dll": "a45db5e18204a1048e9fd9a5acd56ba409951eed78174dffd38b8ad7df4869f9",
+    "Editor/MessagePack.dll.meta": "4964f265290db6d85d79e920effd85605992e41dfe03cfc0b5cdb9d276201cf0",
+    "Editor/Microsoft.NET.StringTools.dll": "389aacd0e9c261fcfb417c75d602bba4be80031b9472f623dfbcd4bd46aa1bd8",
+    "Editor/Microsoft.NET.StringTools.dll.meta": "32d3878691466793676bd5147b9c0b524f84811033e62f6d89f8ff48bc203716",
+    "Editor/Newtonsoft.Json.dll": "8c1dd5c184b4e2e7ead06971ff3ebcb46783be972292d1deb1061744369b4d80",
+    "Editor/Newtonsoft.Json.dll.meta": "3b977d9d609b7a2b04990c7a761d332f3c9c796965b0dd3e4cf9bddac9fae45a",
+    "Editor/OpenAxis.dll": "29ec75901b095071e8bd8848f514cc6d2263738f24c21d38223b7f9cdd82ec12",
+    "Editor/OpenAxis.dll.meta": "a72a7c56a93ff008c40faed612154a3bb11e2181a9627b43b687cb0cfb4671d6",
+    "Editor/Rotatrix.Unity.Editor.dll": "8efa5d1f1aa39e0ba796a2fdeff52dd1becd9f55327efca45b89948531ad86be",
+    "Editor/Rotatrix.Unity.Editor.dll.meta": "1094516f1a74470b82ee0fc1e2a3af4788c22e0d5873cb3d97fa73338a63334b",
+    "Editor.meta": "cfeae8d16e0610d34e89cfabd2a0ed20b903ed1ef73eb19487028387c3ffc433",
+    "LEGAL.md": "2128f830244179051202a1cc8bb642501c21de901dd1893f05165ca5bb3e5ab1",
+    "LEGAL.md.meta": "436e58024a6aaaecf8fe94d046d472ffb412e4be6d3a3831543a6537085c9dd4",
+    "LICENSE.md": "888eb92c0d0ff427c53f25d0afb749f3df0a71b255b9b37d7ec80c7f18ecf1ff",
+    "LICENSE.md.meta": "42af1d57a2ce4b2bd6a7b10b43d05d0d190ad3441d60b333b696f32251253672",
+    "package.json": "49a76cb3b2211eb3091ef910f5d231bb3fc3b0713e6d3b722abf8340b5fab7fb",
+    "package.json.meta": "96ac7dd82f6390033d5e04c122541d465cd4616adc8e2c03eeb7fd156d8a2752",
+    "README.md": "3f6a4d3a2143e05c0b0180457cbe2499e928d2b6dc742c03f5ce89e62b2ae7f2",
+    "README.md.meta": "0c174970ca94c9f38d8bd8ab67c6100e8751d36ac8e12cab217399f06e4fcf0b",
+    "Third Party Notices.md": "d9ce81eca4352d713e58f55b1606e9226981b0f91452eb7f1a6de9b478cde02d",
+    "Third Party Notices.md.meta": "74e36b7f0e0a2439832f455274423be0505402146ec6f9fd915477c888702a88"
+  }
+}
