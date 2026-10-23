@@ -1,0 +1,5 @@
+{
+  "name": "Rotatrix.Unity.Editor.Tests",
+  "includePlatforms": ["Editor"],
+  "autoReferenced": false
+}

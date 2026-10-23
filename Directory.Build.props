@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode>true</RestoreLockedMode>
+    <NuGetLockFilePath>$(MSBuildThisFileDirectory)nuget-locks/$(MSBuildProjectName).json</NuGetLockFilePath>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildThisFileDirectory)=/_/</PathMap>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Keep the advisory fix until OpenAxis publishes an updated dependency floor. -->
+    <PackageReference Include="MessagePack" Version="[2.5.303]" />
+  </ItemGroup>
+</Project>

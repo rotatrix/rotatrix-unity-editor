@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="OpenAxis" Version="[1.0.0-rc.1]" />
+    <Compile Include="Program.cs" />
+    <Compile Include="../src/Rotatrix.Unity.Editor/DiagnosticLog.cs" Link="DiagnosticLog.cs" />
+    <Compile Include="../src/Rotatrix.Unity.Editor/SceneCameraMath.cs" Link="SceneCameraMath.cs" />
+    <Compile Include="../src/Rotatrix.Unity.Editor/EditorScheduler.cs" Link="EditorScheduler.cs" />
+  </ItemGroup>
+</Project>

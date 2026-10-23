@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Rotatrix.Unity.Editor</AssemblyName>
+    <RootNamespace>Rotatrix.Unity.Editor</RootNamespace>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!-- Do not pass global Version: that would also re-version the SDK. -->
+    <Version>$(UnityPluginVersion)</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(UnityManagedPath)/UnityEngine/UnityEngine.PhysicsModule.dll;$(UnityManagedPath)/UnityEngine/UnityEngine.TerrainModule.dll;$(UnityManagedPath)/UnityEngine/UnityEngine.TerrainPhysicsModule.dll">
+      <Private>false</Private>
+    </Reference>
+    <!-- Unity 6.6's editor references Immutable 8. Align the transitive SDK
+         dependency; the editor provides the runtime assembly. -->
+    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
+    <PackageReference Include="OpenAxis" Version="[1.0.0-rc.1]" />
+
+    <Reference Include="UnityEditor" Condition="!Exists('$(UnityManagedPath)/UnityEngine/UnityEditor.CoreModule.dll')">
+      <HintPath>$(UnityManagedPath)/UnityEditor.dll</HintPath><Private>false</Private>
+    </Reference>
+    <Reference Include="$(UnityManagedPath)/UnityEngine/UnityEditor.CoreModule.dll" Condition="Exists('$(UnityManagedPath)/UnityEngine/UnityEditor.CoreModule.dll')">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(UnityManagedPath)/UnityEngine/UnityEngine.CoreModule.dll;$(UnityManagedPath)/UnityEngine/UnityEngine.IMGUIModule.dll">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>Rotatrix.Unity.Editor.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <Target Name="CheckUnityReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(UnityManagedPath)/UnityEditor.dll')"
+           Text="Set UnityManagedPath to the Unity Editor Data/Managed directory (or use build.py --unity)." />
+  </Target>
+</Project>

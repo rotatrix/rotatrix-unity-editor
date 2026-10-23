@@ -1,0 +1,10 @@
+[project]
+name = "rotatrix-unity-tests"
+version = "0.0.0"
+requires-python = ">=3.13"
+[tool.uv]
+package = false
+[dependency-groups]
+test = ["pytest", "pytest-asyncio"]
+[tool.rotatrix-tests]
+python = "3.13"

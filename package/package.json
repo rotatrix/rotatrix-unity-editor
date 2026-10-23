@@ -1,0 +1,24 @@
+{
+  "name": "com.rotatrix.unity",
+  "version": "1.0.0-beta.1",
+  "displayName": "Rotatrix Scene Navigation",
+  "description": "Editor-only Scene view navigation through the Rotatrix OpenAxis host.",
+  "unity": "6000.6",
+  "author": {
+    "name": "Icebound Flame LLC"
+  },
+  "keywords": [
+    "rotatrix",
+    "openaxis",
+    "editor",
+    "navigation"
+  ],
+  "hideInEditor": false,
+  "dependencies": {
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.terrain": "1.0.0",
+    "com.unity.modules.terrainphysics": "1.0.0"
+  },
+  "license": "Elastic-2.0"
+}
