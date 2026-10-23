@@ -10,7 +10,7 @@ The repository contains source and build tooling. It is not itself a UPM package
 
 ## Build and test
 
-Requires Python 3.13, uv, .NET SDK 9.0.314, Git, and Unity 6000.6. The root
+Requires Python 3.13, uv, .NET SDK 9.0.314, Git, and a Unity Editor installation. Builds have been tested with Unity 6000.6.1f1. The root
 `mise.toml` pins uv and .NET; use `mise install` and `mise exec --` if you use mise.
 Python environments are managed by uv. No Rotatrix checkout or submodule is needed.
 Run these commands from the repository root:

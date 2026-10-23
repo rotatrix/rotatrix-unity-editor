@@ -9,7 +9,7 @@ Open Window > Package Management > Package Manager, choose Install package from 
 
 Start Rotatrix, connect your device, and open Window > Rotatrix in Unity to check the connection. Navigate an unlocked 3D Scene view; navigation pauses in Play Mode. Game views and 2D views are not supported.
 """
-requirements = "Requires Unity 6000.6, Rotatrix 1.6.0 or newer, and a Rotatrix device. Windows is supported; macOS and Linux are experimental."
+requirements = "Requires Rotatrix 1.6.0 or newer and a Rotatrix device. Tested with Unity 6000.6.1f1; compatibility with earlier Unity versions has not yet been established. Windows is supported; macOS and Linux are experimental."
 distribution = "external"
 website = "https://github.com/rotatrix/rotatrix-unity-editor"
 

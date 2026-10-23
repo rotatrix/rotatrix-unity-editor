@@ -1,7 +1,8 @@
 # Rotatrix Scene Navigation for Unity
 
 Editor-only orbit, pan, zoom, and free-camera navigation with a Rotatrix device.
-Requires Unity **6000.6** and Rotatrix **1.6.0 or newer**. The package contains
+Requires Rotatrix **1.6.0 or newer**. Tested with Unity **6000.6.1f1**;
+compatibility with earlier Unity versions has not yet been established. The package contains
 managed AnyCPU DLLs. Windows is supported; macOS and Linux are experimental.
 
 ## Install
