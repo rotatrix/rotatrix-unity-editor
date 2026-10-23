@@ -3,7 +3,6 @@
   "version": "1.0.0-beta.1",
   "displayName": "Rotatrix Scene Navigation",
   "description": "Editor-only Scene view navigation through the Rotatrix OpenAxis host.",
-  "unity": "6000.6",
   "author": {
     "name": "Icebound Flame LLC"
   },
