@@ -2,21 +2,15 @@ id = "rotatrix.unity"
 name = "Unity Editor"
 publisher = "Rotatrix"
 subtitle = "Install through Unity Package Manager"
-description = """
-Orbit, pan, zoom, and use free-camera navigation in Unity's 3D Scene view with Rotatrix. Installation is per project; Unity Package Manager manages the dependency and its version.
-
-Open Window > Package Management > Package Manager, choose Install package from Git URL, and paste https://github.com/rotatrix/rotatrix-unity-editor.git#upm. Alternatively, download the release tarball and choose Install package from tarball. Commit the project's package manifest and lockfile so teammates use the same version. Local tarball dependencies are machine-specific; use the Git URL for shared projects. To update to the latest published package, right-click it in Unity Package Manager and choose Update, then commit the lockfile change. The upm branch includes prereleases during beta. To pin a release, replace #upm with a release tag.
-
-Start Rotatrix, connect your device, and open Window > Rotatrix in Unity to check the connection. Navigate an unlocked 3D Scene view; navigation pauses in Play Mode. Game views and 2D views are not supported.
-"""
-requirements = "Requires Rotatrix 1.6.0 or newer and a Rotatrix device. Tested with Unity 6000.6.1f1; compatibility with earlier Unity versions has not yet been established. Windows is supported; macOS and Linux are experimental."
+description = "Orbit, pan, zoom, and navigate freely in Unity's 3D Scene view with Rotatrix."
 distribution = "external"
-website = "https://github.com/rotatrix/rotatrix-unity-editor"
+website = "https://forum.rotatrix.com/t/unity-editor-integration/71"
 
 [action]
-label = "View Unity setup guide"
+label = "Install Unity integration"
 url = "https://github.com/rotatrix/rotatrix-unity-editor#install"
 
-[[links]]
-label = "Releases"
-url = "https://github.com/rotatrix/rotatrix-unity-editor/releases"
+[poster]
+url = "https://forum.rotatrix.com/uploads/default/original/1X/b497b9960be7f003dca2699601b4277e3e68068e.jpeg"
+alt = "Rotatrix Unity Editor navigation demo"
+link = "https://forum.rotatrix.com/t/unity-editor-integration/71"
