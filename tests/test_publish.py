@@ -53,6 +53,9 @@ def test_publish_and_immutable_tags(publisher, tmp_path):
     assert not publisher.git(checkout, "ls-remote", "--heads", "origin", "refs/heads/upm")  # preparation never pushes
     publisher.git(checkout, "push", "--atomic", "origin", "HEAD:refs/heads/upm", "refs/tags/" + tag)
     assert publisher.git(remote, "rev-parse", "main") == source_head
+    provenance_meta = publisher.git(remote, "show", tag + ":BUILD-INFO.json.meta")
+    assert "guid: " in provenance_meta
+    assert "DefaultImporter:" in provenance_meta
     original = publisher.git(checkout, "rev-parse", tag)
     with pytest.raises(ValueError, match="already exists"):
         publisher.prepare(package, report, str(remote), tmp_path / "prepared")
@@ -62,6 +65,7 @@ def test_publish_and_immutable_tags(publisher, tmp_path):
     assert not (checkout / "Editor/old.dll").exists()
     assert (checkout / "BUILD-INFO.json").is_file()
     publisher.git(checkout, "push", "--atomic", "origin", "HEAD:refs/heads/upm", "refs/tags/" + tag)
+    assert publisher.git(remote, "show", tag + ":BUILD-INFO.json.meta") == provenance_meta
     assert publisher.git(remote, "show", "main:source.cs") == "// contributor source"
     assert publisher.git(remote, "rev-parse", "main") == source_head
     assert publisher.git(remote, "rev-parse", "v0.1.0") == original

@@ -31,10 +31,23 @@ resolution fixed. When deliberately updating a NuGet dependency, run
 `dotnet restore <project.csproj> -p:RestoreLockedMode=false` for the plugin and
 standalone test projects, review both locks, then rebuild and test.
 
-Install the generated tarball through Unity Package Manager, or select
-`artifacts/com.rotatrix.unity/package.json` using Install package from
-disk. The build ships editor-only DLLs; it excludes Unity assemblies and plugin
-source. Do not install the `package/` source template.
+### Test a local build
+
+After building, open **Window > Package Management > Package Manager** in Unity.
+Choose **Install package from tarball** and select the generated
+`artifacts/com.rotatrix.unity-<version>.tgz`. Alternatively, choose
+**Install package from disk** and select
+`artifacts/com.rotatrix.unity/package.json`. Some Unity versions label these
+commands **Add package**.
+
+Do not select the `package/` source template. Local file dependencies are
+machine-specific; replace them with a published Git dependency before sharing the
+project. If Unity cannot find a local package, check that the generated files
+still exist at the recorded path.
+
+Start Rotatrix, connect your device, and open **Window > Rotatrix** in Unity to
+check the connection and try Scene view navigation. The build ships editor-only
+DLLs; it excludes Unity assemblies and plugin source.
 
 The native runner creates its own TestProject and requires an activated Unity
 license. It does not test authenticated device input. Run physical-device checks

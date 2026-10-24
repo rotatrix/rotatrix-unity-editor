@@ -14,7 +14,7 @@ import shutil
 import subprocess
 import tempfile
 
-from build import ROOT, source_info
+from build import ROOT, meta, source_info
 
 
 def git(directory: Path, *args: str) -> str:
@@ -63,6 +63,7 @@ def prepare(package: Path, report: dict, remote: str, output: Path) -> tuple[Pat
     # Provenance has no machine paths or source contents.
     provenance = {key: report[key] for key in ("source", "openaxis", "build_platform", "target", "files")}
     (checkout / "BUILD-INFO.json").write_text(json.dumps(provenance, indent=2) + "\n", encoding="utf-8")
+    meta(checkout / "BUILD-INFO.json", checkout)
     git(checkout, "add", "--all")
     git(checkout, "commit", "-m", f"Release Unity editor plugin {tag}")
     git(checkout, "tag", "-a", tag, "-m", f"Unity editor plugin {tag}; source {report['source']['revision']}")
