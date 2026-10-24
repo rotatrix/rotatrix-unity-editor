@@ -2,13 +2,13 @@
 
 Editor-only orbit, pan, zoom, and free-camera navigation with a Rotatrix device.
 Requires Rotatrix **1.6.0 or newer**. Tested with Unity **6000.6.1f1**;
-compatibility with earlier Unity versions has not yet been established. The package contains
-managed AnyCPU DLLs. Windows is supported; macOS and Linux are experimental.
+compatibility with earlier Unity versions has not yet been established.
+Windows is supported; macOS and Linux are experimental.
 
 ## Install
 
 1. In Unity, open **Window > Package Management > Package Manager**.
-2. Choose **Install package from Git URL** and paste the URL for a published tag:
+2. Choose **Install package from Git URL** and paste:
 
    ```text
    https://github.com/rotatrix/rotatrix-unity-editor.git#v1.0.0-beta.1
@@ -17,24 +17,16 @@ managed AnyCPU DLLs. Windows is supported; macOS and Linux are experimental.
 3. After installation, start Rotatrix, connect your device, and open
    **Window > Rotatrix** in Unity to check the connection.
 
-Check the repository's Tags list before installing: the URL only works once that
-release has been published. Installation is per project. Commit
-`Packages/manifest.json` and `Packages/packages-lock.json` so teammates use the same
-dependency. Rotatrix's integration catalog links here; it does not install or
-update project dependencies.
+Installation is per project. Commit `Packages/manifest.json` and
+`Packages/packages-lock.json` so teammates use the same version.
+
+You can also download the `.tgz` from [Releases](https://github.com/rotatrix/rotatrix-unity-editor/releases)
+and select **Install package from tarball** in Package Manager. Use the Git URL
+for shared projects so teammates can fetch the dependency without a local file.
 
 To update, install from a newer published Git tag through Package Manager and
 commit the resulting manifest and lockfile changes. To uninstall, select
 **Rotatrix Scene Navigation** in Package Manager and choose **Remove**.
-
-### Test a local build
-
-In Package Manager, choose **Install package from tarball** and select the built
-`com.rotatrix.unity-1.0.0-beta.1.tgz`. Alternatively, choose **Install package from
-disk** and select `package.json` inside the generated package folder. Some Unity
-versions label these actions **Add package**. Do not select the source template.
-Local file dependencies are machine-specific; replace them with a published Git
-dependency before sharing the project.
 
 ## Use
 
@@ -51,8 +43,8 @@ the free-camera translation scale. Normal mouse navigation remains available.
 ## Troubleshooting
 
 If installation fails, check that the selected Git tag exists and that Git is
-available to Unity. For a local test, check that the package file still exists at
-the recorded path.
+available to Unity. For a tarball installation, check that the downloaded file
+still exists at the recorded path.
 
 If navigation is inactive, start Rotatrix with a connected device, check
 **Window > Rotatrix**, and choose **Connect** if disconnected. Keep Unity in the
@@ -60,9 +52,13 @@ foreground with an unlocked 3D Scene view and exit Play Mode.
 
 Use **Copy diagnostic log** for troubleshooting; the window also displays the
 SDK session log path. Include Unity, Rotatrix, and package versions in reports.
-This package contains editor-only binaries. [Source and contributions](https://github.com/rotatrix/rotatrix-unity-editor) are available in the repository.
-See **Third Party Notices.md** for dependency licenses.
+## Development and contributions
+
+See the [development guide](https://github.com/rotatrix/rotatrix-unity-editor/blob/main/DEVELOPMENT.md)
+for building and testing local changes, and [contributing](https://github.com/rotatrix/rotatrix-unity-editor/blob/main/CONTRIBUTING.md)
+for changes and bug reports.
 
 ## Licensing
 
 Source is available under ELv2. See [legal notices](LEGAL.md) for details.
+Each compiled package includes **Third Party Notices.md** with dependency licenses.
