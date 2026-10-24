@@ -11,7 +11,7 @@ Windows is supported; macOS and Linux are experimental.
 2. Choose **Install package from Git URL** and paste:
 
    ```text
-   https://github.com/rotatrix/rotatrix-unity-editor.git#v1.0.0-beta.1
+   https://github.com/rotatrix/rotatrix-unity-editor.git#upm
    ```
 
 3. After installation, start Rotatrix, connect your device, and open
@@ -24,8 +24,16 @@ You can also download the `.tgz` from [Releases](https://github.com/rotatrix/rot
 and select **Install package from tarball** in Package Manager. Use the Git URL
 for shared projects so teammates can fetch the dependency without a local file.
 
-To update, install from a newer published Git tag through Package Manager and
-commit the resulting manifest and lockfile changes. To uninstall, select
+The `upm` branch tracks published packages, including prereleases during beta.
+Unity locks each installation to a commit; opening the project does not silently
+upgrade it. To update, right-click the package in Package Manager and choose
+**Update**, then commit the resulting lockfile changes. If your Unity version
+does not offer Update, install again using the same Git URL.
+
+To pin a particular release, replace `#upm` with its tag, such as
+`#v1.0.0-beta.1`. Updating a pinned release requires changing the tag.
+
+To uninstall, select
 **Rotatrix Scene Navigation** in Package Manager and choose **Remove**.
 
 ## Use
@@ -42,7 +50,7 @@ the free-camera translation scale. Normal mouse navigation remains available.
 
 ## Troubleshooting
 
-If installation fails, check that the selected Git tag exists and that Git is
+If installation fails, check that the selected Git branch or tag exists and that Git is
 available to Unity. For a tarball installation, check that the downloaded file
 still exists at the recorded path.
 
