@@ -59,7 +59,7 @@ Development happens on `main`. `publish.py` prepares compiled package commits on
 `upm` and immutable `v<version>` tags, leaving `main` unchanged. Existing tags,
 including `v1.0.0-beta.1`, must not be replaced. Use a new version for the next release.
 
-1. Set the next version in `package/package.json`, update installation examples,
+1. Set the next version in `package/package.json`
    and commit source changes on main.
 2. Build and test the generated package from that clean revision. Push the source
    commit so release provenance points to publicly available source.
@@ -74,8 +74,10 @@ including `v1.0.0-beta.1`, must not be replaced. Use a new version for the next 
 5. Create a GitHub release for that tag and attach the exact tested `.tgz` from
    `artifacts/`. Mark prereleases as prereleases.
 
-Git URL installs use release tags pointing to compiled packages on `upm`, not
-`main`. Existing release tags retain their root package layout, so installed Git
+Recommended Git URL installs track `upm`, which advances only when publishing
+a package intended for users. During beta this includes prereleases. Users can
+update explicitly in Unity Package Manager or pin an immutable release tag.
+Git installs consume compiled packages, not the source branch `main`. Existing release tags retain their root package layout, so installed Git
 URLs continue working. The release README links back to source on main. Generated
 packages and binaries are not checked into the source branch.
 

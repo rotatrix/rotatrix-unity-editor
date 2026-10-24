@@ -5,7 +5,7 @@ subtitle = "Install through Unity Package Manager"
 description = """
 Orbit, pan, zoom, and use free-camera navigation in Unity's 3D Scene view with Rotatrix. Installation is per project; Unity Package Manager manages the dependency and its version.
 
-Open Window > Package Management > Package Manager, choose Install package from Git URL, and paste https://github.com/rotatrix/rotatrix-unity-editor.git#v1.0.0-beta.1. Alternatively, download the release tarball and choose Install package from tarball. Commit the project's package manifest and lockfile so teammates use the same version. Local tarball dependencies are machine-specific; use the Git URL for shared projects. Update or remove the package through Unity Package Manager.
+Open Window > Package Management > Package Manager, choose Install package from Git URL, and paste https://github.com/rotatrix/rotatrix-unity-editor.git#upm. Alternatively, download the release tarball and choose Install package from tarball. Commit the project's package manifest and lockfile so teammates use the same version. Local tarball dependencies are machine-specific; use the Git URL for shared projects. To update to the latest published package, right-click it in Unity Package Manager and choose Update, then commit the lockfile change. The upm branch includes prereleases during beta. To pin a release, replace #upm with a release tag.
 
 Start Rotatrix, connect your device, and open Window > Rotatrix in Unity to check the connection. Navigate an unlocked 3D Scene view; navigation pauses in Play Mode. Game views and 2D views are not supported.
 """
